@@ -10,6 +10,7 @@ const game = ((players) => {
     
     const clearBoard = () => {
       gameBoardArr.forEach((row,i) => row.forEach((char, j) => gameBoardArr[i][j] = ''))
+      cellsOccupied = 0;
       renderGameBoard();
     };
 
@@ -18,6 +19,11 @@ const game = ((players) => {
       cellsOccupied++;
       renderGameBoard();
     };
+
+    const checkIfTie = () => {
+      console.log(cellsOccupied)
+      return cellsOccupied === 9 ? true : false;
+    }
 
     const checkIfWon = (row, col, player) => {
       let cnt = 0, tempRow = 0, tempCol = 0;
@@ -60,7 +66,8 @@ const game = ((players) => {
       gameBoardArr,
       checkIfWon,
       markSpot,
-      clearBoard
+      clearBoard,
+      checkIfTie
     }
   })();
   
@@ -73,6 +80,7 @@ const game = ((players) => {
         score.textContent = `${(Number(score.textContent)+1)}`;
         gameBoard.clearBoard();
       }
+      if (gameBoard.checkIfTie()) gameBoard.clearBoard();
       
       currPlayer = currPlayer === 1 ? 0 : 1;
     };
