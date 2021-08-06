@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <div>
+        <label for="player1">Player1:</label>
+        <input type="text" name="player1" id="player1">
+      </div>
+      <div>
+        <label for="player2">Player2:</label>
+        <input type="text" name="player2" id="player2">
+      </div>
+      <button class="overlay__container--btn">Start</button>
+    </div>
+    
+  </div>
+
+  <div class="scores">
+    <div class="playerOne">
+      <div>
+        <span class="playerOne__name">ORAO</span>
+        <span class="playerOne__score">0</span>
+      </div>
+    </div>
+    <div class="playerTwo">
+      <div>
+        <span class="playerTwo__name">Soko</span>
+        <span class="playerTwo__score">0</span>
+      </div>
+    </div>
+    <button class="newGame-btn">NEW GAME</button>
+
+  </div>
+
+  <div class="gameboard">
+    <div class="cell" data-row="0" data-col="0"><span></span></div>
+    <div class="cell" data-row="0" data-col="1"><span></span></div>
+    <div class="cell" data-row="0" data-col="2"><span></span></div>
+    <div class="cell" data-row="1" data-col="0"><span></span></div>
+    <div class="cell" data-row="1" data-col="1"><span></span></div>
+    <div class="cell" data-row="1" data-col="2"><span></span></div>
+    <div class="cell" data-row="2" data-col="0"><span></span></div>
+    <div class="cell" data-row="2" data-col="1"><span></span></div>
+    <div class="cell" data-row="2" data-col="2"><span></span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
